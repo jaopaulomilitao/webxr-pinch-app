@@ -1,10 +1,8 @@
 # WebXR Pinch Interaction Engine
 
-Repositório: [https://github.com/jaopaulomilitao/webxr-pinch-app](https://github.com/jaopaulomilitao/webxr-pinch-app)
-
 Este projeto consiste em um motor de computação espacial e realidade aumentada baseado em navegador (Web AR). O sistema integra visão computacional em tempo real para rastreamento de mãos, modelos preditivos customizados de Machine Learning para classificação de gestos e renderização 3D avançada, permitindo interações físicas bidestras (bimanual interaction) com objetos virtuais projetados sobre o ambiente real.
 
-![Demonstração do Projeto](link_para_o_gif_aqui.gif)
+<img src="https://github.com/user-attachments/assets/be1a1cbe-a416-4a51-9a62-cd9fb0aadef6" alt="Demonstração do Projeto" width="75%">
 
 ## 1. Arquitetura do Sistema
 
@@ -31,6 +29,8 @@ A classificação do gesto de "pinça" (Pinch) é orientada por um pipeline cust
 
 ### 3.1. Base de Dados e Extração
 O modelo foi treinado utilizando o dataset público `gti-upm/leapgestrecog` disponibilizado no Kaggle. O escopo foi modelado como um problema de classificação binária, mapeando as imagens pertencentes à classe `07_ok` como positivas (pinça) e as da classe `01_palm` como negativas (mão aberta). O processamento inicial e a extração das coordenadas tridimensionais das juntas da mão foram executados sobre as imagens do dataset utilizando o framework MediaPipe. 
+
+<img width="1160" height="534" alt="Captura de tela 2026-03-08 144700" src="https://github.com/user-attachments/assets/059c3923-a812-41bc-8bcd-65a53227f13a" />
 
 ### 3.2. Engenharia de Features
 Para garantir invariância de escala (independente da distância da mão em relação à lente da câmera), a *feature* extraída não corresponde à coordenada bruta, mas sim à distância euclidiana espacial normalizada.
