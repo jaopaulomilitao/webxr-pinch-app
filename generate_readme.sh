@@ -1,3 +1,10 @@
+#!/bin/bash
+
+# the target file is defined
+target_file="README.md"
+
+# the markdown content is generated and written to the file
+cat << 'EOF' > "$target_file"
 # WebXR Pinch Interaction Engine
 
 Repositório: [https://github.com/jaopaulomilitao/webxr-pinch-app](https://github.com/jaopaulomilitao/webxr-pinch-app)
